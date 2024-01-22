@@ -11,3 +11,4 @@ function capitalize(word) {
 console.log(capitalize('sam')); // "Sam"
 console.log(capitalize('ALEX')); // "Alex"
 console.log(capitalize('chARLie')); // "Charlie"
+console.log(capitalize('margit'));
