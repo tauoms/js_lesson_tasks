@@ -28,9 +28,8 @@ let max = 98;
 
 let answer = '';
 
-for (let min = 2; min <= 98; min += 2) {
-    answer += `${min}, `;
-    answer += `${max}, `;
+for (let min = 2; min <= 50; min += 2) {
+    answer += `${min}, ${max}, `;
     max -= 2;
 }
 
