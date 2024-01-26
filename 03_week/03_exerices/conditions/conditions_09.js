@@ -3,8 +3,9 @@
 // 8 random answers
 
 function run8Ball () {
-    prompt("Please enter your question:", "question here");
+    prompt("Please enter your YES or NO question:", "question here");
     let randomNumber = Math.floor(Math.random() * 8);
+    console.log('The magic 8-ball answers you:');
     switch (randomNumber) {
         case 1:
             console.log('Absolutely.');
