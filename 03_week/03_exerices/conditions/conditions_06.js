@@ -8,9 +8,13 @@ Develop a function called greaterNum which:
 
 // Sample usage - do not modify
 
+// function greaterNum (firstNum, secondNum) {
+//     if (firstNum > secondNum) return firstNum;
+//     else return secondNum;
+// }
+
 function greaterNum (firstNum, secondNum) {
-    if (firstNum > secondNum) return firstNum;
-    else return secondNum;
+    return firstNum > secondNum ? firstNum : secondNum;
 }
 
 console.log(greaterNum(5, 10));
