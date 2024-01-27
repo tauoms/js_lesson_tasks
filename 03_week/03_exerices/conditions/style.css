@@ -34,7 +34,18 @@ section {
   height: 600px;
   border-radius: 50%;
   text-align: center;
+  animation: bgcolorchange 3.5s ease-in-out 1s infinite alternate;
+
   /* margin: 20% auto; */
+}
+
+@keyframes bgcolorchange {
+  from {
+    background-color: rgb(20, 5, 32);
+  }
+  to {
+    background-color: rgb(59, 26, 86);
+  }
 }
 
 .glare1 {
