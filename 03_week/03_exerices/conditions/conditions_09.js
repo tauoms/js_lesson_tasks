@@ -2,6 +2,45 @@
 
 // 8 random answers
 
+// console version:
+// function run8Ball () {
+//     prompt("Please enter your YES or NO question:", "question here");
+//     let randomNumber = Math.floor(Math.random() * 8);
+//     console.log('The magic 8-ball answers you:');
+//     switch (randomNumber) {
+//         case 0:
+//             console.log('Absolutely.');
+//             break;
+//         case 1:
+//             console.log('Probably, yes.');
+//             break;
+//         case 2:
+//             console.log('Go for it!');
+//             break;
+//         case 3:
+//             console.log('Well, if you feel like it!');
+//             break;
+//         case 4:
+//             console.log('I have no idea...');
+//             break;
+//         case 5:
+//             console.log('Not today.');
+//             break;
+//         case 6:
+//             console.log('What!? ABSOLUTELY not!');
+//             break;
+//         case 7:
+//             console.log('That doesn\'t sound like a good idea...');
+//             break;
+//         default:
+//             break;
+//         }
+// }
+
+// run8Ball();
+
+// Browser version:
+
 function run8Ball () {
     prompt("Please enter your YES or NO question:", "question here");
     let randomNumber = Math.floor(Math.random() * 8);
