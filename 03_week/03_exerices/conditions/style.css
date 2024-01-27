@@ -8,7 +8,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: x-large;
   letter-spacing: 2px;
-  background-color: rgba(204, 207, 184, 0.737);
+  background-color: rgba(162, 182, 176, 0.737);
 }
 
 h1 {
@@ -16,7 +16,7 @@ h1 {
   text-align: center;
   font-size: 240px;
   font-weight: 700;
-  color: blanchedalmond;
+  color: rgba(255, 255, 255, 0.962);
   padding-top: 120px;
 }
 
