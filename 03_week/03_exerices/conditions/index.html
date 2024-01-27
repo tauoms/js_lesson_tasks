@@ -7,5 +7,21 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="conditions_09.js"></script>
   </head>
-  <body></body>
+  <body>
+    <section>
+      <div class="eightball">
+        <div class="glare1"></div>
+        <h1>8</h1>
+        <div class="glare2"></div>
+        <div id="answer"></div>
+      </div>
+      <div class="question">
+        <form action="./conditions_09.js">
+          <label for="question">What is your question?</label><br />
+          <input type="text" id="question" name="question" size="20" />
+        </form>
+        <input class="button" type="button" value="Ask" onclick="run8Ball()" />
+      </div>
+    </section>
+  </body>
 </html>

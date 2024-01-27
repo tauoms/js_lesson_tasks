@@ -5,5 +5,90 @@
 }
 
 body {
-  background-color: green;
+  font-family: "Courier New", Courier, monospace;
+  font-size: x-large;
+  letter-spacing: 2px;
+  background-color: rgba(204, 207, 184, 0.737);
+}
+
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-size: 240px;
+  font-weight: 700;
+  color: blanchedalmond;
+  padding-top: 120px;
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.eightball {
+  background-color: rgb(20, 5, 32);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  text-align: center;
+  /* margin: 20% auto; */
+}
+
+.glare1 {
+  width: 140px;
+  height: 140px;
+  background-color: rgb(137, 72, 186);
+  border-radius: 50%;
+  filter: blur(52px);
+  position: absolute;
+  top: 17%;
+  left: 78%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.glare2 {
+  width: 140px;
+  height: 140px;
+  background-color: rgb(137, 72, 186);
+  border-radius: 50%;
+  filter: blur(55px);
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.question {
+  width: 600px;
+  height: 200px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#answer {
+  color: blanchedalmond;
+  font-size: smaller;
+}
+
+input[type="text"] {
+  width: 400px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 2px solid rgb(139, 63, 132);
+  outline: none;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: antiquewhite;
+  font-family: "Courier New", Courier, monospace;
+  font-size: x-large;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 20px;
 }
