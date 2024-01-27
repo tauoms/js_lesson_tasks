@@ -42,6 +42,7 @@
 // Browser version:
 
 function run8Ball () {
+    let answer;
     let element = document.getElementById( 'answer' );
     let randomNumber = Math.floor(Math.random() * 8);
     switch (randomNumber) {
