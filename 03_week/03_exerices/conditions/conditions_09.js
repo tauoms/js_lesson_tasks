@@ -75,4 +75,5 @@ function run8Ball () {
         }
         element.style.display = 'inline-block';
         element.innerHTML = answer;
+        document.getElementById("questionform").reset();
 }
