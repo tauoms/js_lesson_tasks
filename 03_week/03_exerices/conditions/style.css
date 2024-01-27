@@ -73,6 +73,7 @@ section {
 #answer {
   color: blanchedalmond;
   font-size: smaller;
+  padding: 0 55px;
 }
 
 input[type="text"] {
