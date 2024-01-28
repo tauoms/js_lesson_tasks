@@ -47,10 +47,11 @@ function run8Ball () {
     let question = document.getElementById( 'questioninput' ).value;
     let randomNumber = Math.floor(Math.random() * 8);
     
-    if (question.slice(-1) != '?') {
+    if (question == '') {
+        answer = 'You didn\'t even write anything. =(';
+    } else if (question.slice(-1) != '?') {
         answer = 'That is not a question though...';
-        
-    } else {
+    }   else {
     switch (randomNumber) {
         case 0:
             answer = 'Absolutely.';
