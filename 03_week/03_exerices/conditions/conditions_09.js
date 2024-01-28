@@ -44,7 +44,13 @@
 function run8Ball () {
     let answer;
     let element = document.getElementById( 'answer' );
+    let question = document.getElementById( 'questioninput' ).value;
     let randomNumber = Math.floor(Math.random() * 8);
+    
+    if (question.slice(-1) != '?') {
+        answer = 'That is not a question though...';
+        
+    } else {
     switch (randomNumber) {
         case 0:
             answer = 'Absolutely.';
@@ -73,6 +79,7 @@ function run8Ball () {
         default:
             break;
         }
+    }
         element.style.display = 'inline-block';
         element.innerHTML = answer;
         document.getElementById("questionform").reset();

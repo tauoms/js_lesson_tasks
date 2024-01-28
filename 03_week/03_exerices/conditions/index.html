@@ -16,11 +16,17 @@
         <div id="answer"></div>
       </div>
       <div class="question">
-        <form id="questionform">
+        <form id="questionform" onsubmit="run8Ball(); return false;">
           <label for="question">What is your question?</label><br />
-          <input type="text" size="20" />
+          <input type="text" id="questioninput" size="20" />
+          <br />
+          <input
+            class="button"
+            type="button"
+            value="Ask"
+            onclick="run8Ball();"
+          />
         </form>
-        <input class="button" type="button" value="Ask" onclick="run8Ball();" />
       </div>
     </section>
   </body>
