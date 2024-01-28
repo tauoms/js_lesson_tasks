@@ -16,7 +16,11 @@
         <div id="answer"></div>
       </div>
       <div class="question">
-        <form id="questionform" onsubmit="run8Ball(); return false;">
+        <form
+          id="questionform"
+          autocomplete="off"
+          onsubmit="run8Ball(); return false;"
+        >
           <label for="question">What is your question?</label><br />
           <input type="text" id="questioninput" size="20" />
           <br />
