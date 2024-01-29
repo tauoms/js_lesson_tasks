@@ -7,5 +7,6 @@ while (distance != 0) {
     distance = Number(prompt('Input distance (km):'));
     if (distance == 0) break;
     time = Number(prompt("Input time (h):"));
-    console.log(`${distance / time} km/h`);
+    let average = distance / time;
+    console.log(`The avarage speed is: ${average.toFixed(0)} km/h`);
 }
