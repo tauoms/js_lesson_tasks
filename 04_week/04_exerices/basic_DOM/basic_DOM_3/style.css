@@ -1,10 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Courier New", Courier, monospace;
-  font-size: 16px;
+  font-size: 18px;
+  background-color: blanchedalmond;
+  line-height: 1.5;
 }
 
 #displayText {
-  width: 600px;
-  height: 300px;
-  border: solid 2px;
+  width: 700px;
+  height: 400px;
+  border: solid 1px #d6bea0;
+  background-color: antiquewhite;
+  padding: 20px;
+  margin: 200px auto 0;
+}
+
+#typeWriter {
+  text-align: center;
+  width: 740px;
+  height: 140px;
+  background-color: #47606f;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+#typingInputField {
+  margin-top: 60px;
+}
+
+input {
+  width: 500px;
+  padding: 10px;
+  border-radius: 20px;
 }
