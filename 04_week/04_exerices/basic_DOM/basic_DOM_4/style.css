@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   background-color: #fff8f0;
   color: #5a4a42;
   display: flex;
@@ -13,7 +13,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 80%;
+  width: 100%;
 }
 
 .image-container {
@@ -22,9 +22,9 @@ body {
 }
 
 .image-container img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
+  width: 50vw;
+  height: 100vh;
+  /* border-radius: 20px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -35,8 +35,8 @@ body {
 
 .price-banner {
   position: absolute;
-  top: 20px;
-  left: 50%;
+  top: 200px;
+  left: 70%;
   transform: translateX(-50%);
   background-color: #d17b49;
   color: white;
