@@ -45,5 +45,5 @@ function updatePrice () {
     const priceBannerSpan = document.querySelector('.price-banner > span');
     priceBannerSpan.style.animation = 'none';
     void priceBannerSpan.offsetWidth;
-    priceBannerSpan.style.animation = 'zoom 0.4s ease-in-out 1';
+    priceBannerSpan.style.animation = 'zoom 0.5s ease-in-out 1';
 }
