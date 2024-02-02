@@ -5,7 +5,7 @@ const bananas = document.querySelector('#bananas');
 const syrup = document.querySelector('#syrup');
 const whippedCream = document.querySelector('#whippedCream');
 const iceCream = document.querySelector('#iceCream');
-const totalPrice = document.querySelector('.totalPrice');
+const totalPrice = document.querySelectorAll('.totalPrice');
 const toppings = [nuts, bananas, syrup, whippedCream, iceCream];
 
 type.addEventListener('change', updatePrice);
@@ -38,6 +38,6 @@ function updatePrice () {
     //     priceCounter += Number(iceCream.value);
     // } 
     
-    totalPrice.textContent = `${priceCounter}€`;
+    totalPrice.forEach(totalPrice => totalPrice.textContent = `${priceCounter}€`);
 
 }
