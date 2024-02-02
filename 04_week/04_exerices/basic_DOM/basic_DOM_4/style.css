@@ -37,8 +37,8 @@ body {
 
 .price-banner {
   position: absolute;
-  top: 200px;
-  left: 70%;
+  top: 13%;
+  right: 2%;
   transform: translateX(-50%);
   background-color: #d17b49;
   color: #f7e1e1;
