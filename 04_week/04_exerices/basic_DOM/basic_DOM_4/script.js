@@ -18,6 +18,7 @@ iceCream.addEventListener('change', updatePrice);
 function updatePrice () {
     let priceCounter = Number(type.value);
 
+    // Loop through toppings array, add to price if checked
     toppings.forEach((currentElement => {
         if(currentElement.checked) {
         priceCounter += Number(currentElement.value)
@@ -40,4 +41,9 @@ function updatePrice () {
     
     totalPrice.forEach(totalPrice => totalPrice.textContent = `${priceCounter}€`);
 
+    // Trigger animation for price-banner
+    const priceBannerSpan = document.querySelector('.price-banner > span');
+    priceBannerSpan.style.animation = 'none';
+    void priceBannerSpan.offsetWidth;
+    priceBannerSpan.style.animation = 'zoom 0.3s ease-in-out 1';
 }
