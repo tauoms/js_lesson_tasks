@@ -40,7 +40,7 @@ function updatePrice () {
     }));
 
     // Apparently querySelectorAll (on line 22) returns a LIST of queried elements. Loop through that list (containing the two elements with class .totalPrice [I changed them from ID to class]) and assign total price stored in priceCounter.
-    totalPrice.forEach(element => element.textContent = `${priceCounter}€`);
+    totalPrice.forEach(currentElement => currentElement.textContent = `${priceCounter}€`);
 
     // Trigger animation for price-banner (thank you Stack Overflow).
     const priceBannerSpan = document.querySelector('.price-banner > span');
