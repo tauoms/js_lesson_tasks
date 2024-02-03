@@ -42,8 +42,9 @@ body {
   right: 2%;
   transform: translateX(-50%);
   background-color: #d17b49;
+  background: radial-gradient(circle, #ce7b4a 20%, #5e3f06 100%);
   color: #f7e1e1;
-  border: solid 5px #b26030;
+  /* border: solid 5px #b26030; */
   border-radius: 50%;
   width: 100px;
   height: 100px;
