@@ -20,6 +20,7 @@ const syrup = document.querySelector('#syrup');
 const whippedCream = document.querySelector('#whippedCream');
 const iceCream = document.querySelector('#iceCream');
 const totalPrice = document.querySelectorAll('.totalPrice');
+
 const toppings = [nuts, bananas, syrup, whippedCream, iceCream];
 
 type.addEventListener('change', updatePrice);
@@ -32,19 +33,19 @@ iceCream.addEventListener('change', updatePrice);
 function updatePrice () {
     let priceCounter = Number(type.value);
 
-    // Loop through 'toppings' array (line 23), add value to price if checked.
+    // Loop through 'toppings' array (line 24), add their value to priceCounter if checked.
     toppings.forEach((currentElement => {
-        if(currentElement.checked) {
+        if (currentElement.checked) {
         priceCounter += Number(currentElement.value)
         }
     }));
 
-    // Apparently querySelectorAll (on line 22) returns a LIST of queried elements. Loop through that list (containing the two elements with class .totalPrice [I changed them from ID to class]) and assign total price stored in priceCounter.
+    // Apparently querySelectorAll (on line 22) returns a LIST of matching elements. Loop through that list (containing the two elements with class .totalPrice [I changed them from ID to class in HTML]) and assign total price stored in priceCounter.
     totalPrice.forEach(currentElement => currentElement.textContent = `${priceCounter}€`);
 
-    // Trigger animation for price-banner (thank you Stack Overflow).
+    // Trigger animation for price-banner span (thank you Stack Overflow).
     const priceBannerSpan = document.querySelector('.price-banner > span');
     priceBannerSpan.style.animation = 'none';
-    void priceBannerSpan.offsetWidth;
+    void priceBannerSpan.offsetWidth; // Trigger reflow
     priceBannerSpan.style.animation = 'zoomAndRotate 0.5s ease-in-out 1';
 }
