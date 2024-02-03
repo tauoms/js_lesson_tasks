@@ -1,12 +1,12 @@
 body {
   font-family: "Josefin Sans", sans-serif;
-  background-color: #fff8f0;
   color: #5a4a42;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  background: linear-gradient(to bottom, #fffdf0, #ab95b5);
 }
 
 .container {
@@ -31,7 +31,7 @@ body {
 
 .form-container {
   flex: 1;
-  padding: 20px;
+  padding: 0 50px;
   margin-top: 10%;
 }
 
@@ -42,14 +42,14 @@ body {
   transform: translateX(-50%);
   background-color: #d17b49;
   color: #f7e1e1;
-  border: solid 4px #b26030;
+  border: solid 5px #b26030;
   border-radius: 50%;
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 28px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
