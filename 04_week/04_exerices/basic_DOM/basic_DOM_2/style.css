@@ -7,26 +7,32 @@
 body {
   font-family: "Courier New", Courier, monospace;
   font-size: 18px;
-  background-color: rgb(180, 218, 182);
+  background-color: #9bb79c;
   line-height: 1.5;
 }
 
 section {
-  width: 40vw;
+  width: 420px;
   margin: 200px auto;
-  text-align: left;
+  padding: 26px 40px;
+  background-color: #cedec9;
+  border-radius: 10px;
 }
 
 input {
-  width: 500px;
+  width: 192px;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 button {
   padding: 10px;
   margin: 16px 0;
   border-radius: 20px;
+}
+
+.pancakeBtn {
+  background-color: rgb(232, 98, 205);
 }
 
 .pancakeLi {

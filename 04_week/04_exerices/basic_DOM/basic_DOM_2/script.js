@@ -25,9 +25,12 @@ function addFruit () {
     const fruitInput = document.getElementById('fruitInput');
     const fruitList = document.getElementById('fruitList');
     const addLi = document.createElement('li');
+
+    if (fruitInput.value != '') {
     addLi.appendChild(document.createTextNode(fruitInput.value));
     fruitList.appendChild(addLi);
     fruitInput.value = '';
+    }
 }
 
 function addPancake () {
