@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  background-color: rgb(180, 218, 182);
+  line-height: 1.5;
+}
+
+section {
+  width: 40vw;
+  margin: 200px auto;
+  text-align: left;
+}
+
+input {
+  width: 500px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+button {
+  padding: 10px;
+  margin: 16px 0;
+  border-radius: 20px;
+}
+
+.pancakeLi {
+  font-family: "Comic Sans MS", sans-serif;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
