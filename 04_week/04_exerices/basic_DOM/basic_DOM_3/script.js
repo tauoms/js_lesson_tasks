@@ -21,11 +21,17 @@ The event listener's function should:
 - To have the display update more dynamically (as the user types), consider using the input event instead of or in addition to the change event.  */
 
 const displayText = document.querySelector('#displayText');
+const resetButton = document.querySelector('#resetButton');
+const typingInputField = document.querySelector('#typingInputField');
 
 typingInputField.addEventListener('input', updateDisplay);
+resetButton.addEventListener('click', resetPage);
 
-function updateDisplay() {
-    const typingInputField = document.querySelector('#typingInputField');
-
+function updateDisplay () {
     displayText.textContent = typingInputField.value;
+}
+
+function resetPage () {
+    displayText.textContent = "";
+    typingInputField.value = "";
 }

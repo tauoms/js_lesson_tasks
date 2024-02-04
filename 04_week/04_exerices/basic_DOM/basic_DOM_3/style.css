@@ -14,6 +14,7 @@ body {
 #displayText {
   width: 700px;
   height: 400px;
+  word-break: break-all;
   border: solid 1px #d6bea0;
   background-color: antiquewhite;
   padding: 20px;
@@ -23,7 +24,7 @@ body {
 #typeWriter {
   text-align: center;
   width: 740px;
-  height: 140px;
+  min-height: 140px;
   background-color: #47606f;
   border-radius: 20px;
   margin: 0 auto;
@@ -36,5 +37,11 @@ body {
 input {
   width: 500px;
   padding: 10px;
+  border-radius: 20px;
+}
+
+button {
+  padding: 10px;
+  margin: 16px 0;
   border-radius: 20px;
 }
