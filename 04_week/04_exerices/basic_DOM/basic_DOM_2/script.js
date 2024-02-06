@@ -14,6 +14,8 @@ Ensure the input field is cleared after adding the fruit to the list.
 const addFruitBtn = document.getElementById('addFruitBtn');
 const addPancakeBtn = document.getElementById('addPancakeBtn');
 const hideShowPancakesBtn = document.getElementById('hideShowPancakesBtn');
+const fruitList = document.getElementById('fruitList');
+
 
 let pancakesVisible = true;
 
@@ -23,19 +25,18 @@ hideShowPancakesBtn.addEventListener('click', hideShowPancakes);
 
 function addFruit () {
     const fruitInput = document.getElementById('fruitInput');
-    const fruitList = document.getElementById('fruitList');
     const addLi = document.createElement('li');
 
     if (fruitInput.value != '') {
-    addLi.appendChild(document.createTextNode(fruitInput.value));
-    fruitList.appendChild(addLi);
-    fruitInput.value = '';
+        addLi.appendChild(document.createTextNode(fruitInput.value));
+        fruitList.appendChild(addLi);
+        fruitInput.value = '';
     }
 }
 
 function addPancake () {
-    const fruitList = document.getElementById('fruitList');
     const addLi = document.createElement('li');
+
     addLi.classList.add('pancakeLi');
     addLi.appendChild(document.createTextNode('I AM A PANCAKE.'));
     fruitList.appendChild(addLi);
@@ -59,3 +60,25 @@ function hideShowPancakes () {
     }
 
 }
+
+/* Margit's live code version:
+
+const button = document.querySelector('#addFruitBtn');
+
+const addDetails = () => {
+    const fruitInput = document.querySelector('#fruitInput');
+    const fruitList = document.querySelector('#fruitList');
+
+    if (fruitInput) {
+    const newLi = document.createElement('li');
+    newLi.textContent = fruitInput.value.trim();
+    fruitList.appendChild(newLi);
+    fruitInput.value = '';
+    } else {
+        alert('Please enter a fruit name.')
+    }
+};
+
+button.addEventListener('click', addDetails) // NO BRACKETS after function name. Otherwise will run even when event not triggered.
+
+*/

@@ -33,14 +33,14 @@ iceCream.addEventListener('change', updatePrice);
 function updatePrice () {
     let priceCounter = Number(type.value);
 
-    // Loop through 'toppings' array (line 24), add their value to priceCounter if checked.
+    // Loop through 'toppings' array (line 24)
     toppings.forEach((currentElement => {
         if (currentElement.checked) {
         priceCounter += Number(currentElement.value)
         }
     }));
 
-    // Apparently querySelectorAll (on line 22) returns a LIST of matching elements. Loop through that list (containing the two elements with class .totalPrice [I changed them from ID to class in HTML]) and assign total price stored in priceCounter.
+    // querySelectorAll (on line 22) returns an NodeList of matching elements. Loop through that list and assign total price stored in priceCounter.
     totalPrice.forEach(currentElement => currentElement.textContent = `${priceCounter}€`);
 
     // Trigger animation for price-banner span (thank you Stack Overflow).
@@ -49,3 +49,34 @@ function updatePrice () {
     void priceBannerSpan.offsetWidth; // Trigger reflow
     priceBannerSpan.style.animation = 'zoomAndRotate 0.4s ease-in-out 1';
 }
+
+
+
+/*
+Margit's live code version:
+
+const form = document.querySelector('.form-container');
+
+const priceCalc = () => {
+    const typeSelect = document.querySelector('#type');
+    const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+    const priceBanner = document.querySelector('#totalPrice');
+
+    let totalAmount = parseInt(typeSelect.value);
+
+    // For Of loop - only for arrays & NodeLists!
+    for (const item of checkBoxes) { 
+        if (item.checked) {
+            totalAmount += parseInt(checkbox.value);
+        }
+    }
+
+    priceBanner.textContent = `$${totalAmount}`;
+
+};
+
+form.addEventListener('change', priceCalc);
+
+
+
+*/
