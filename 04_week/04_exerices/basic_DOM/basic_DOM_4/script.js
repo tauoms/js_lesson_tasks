@@ -1,11 +1,11 @@
 
 
-const type = document.querySelector('#type');
 const form = document.querySelector('.form-container');
 
 form.addEventListener('change', updatePrice);
 
 function updatePrice () {
+    const type = document.querySelector('#type');
     const toppings = document.querySelectorAll('input[type="checkbox"]');
     const totalPrice = document.querySelectorAll('.totalPrice');
 
