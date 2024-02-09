@@ -9,6 +9,14 @@ Expected outcome:
 */
 // Write your function here
 
+// function myAlphabetLength () {
+//     console.log(`The length of myAlphabet: ${myAlphabet.length}`);
+
+//     myAlphabet.length < 5 ? console.log('Array length is less than 5.') : console.log('Array length is greater than or equal to 5.');
+// }
+
+// myAlphabetLength(myAlphabet);
+
 // Exerice 2: Iterate over array and log each item with its index
 const planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter'];
 /*
@@ -19,6 +27,8 @@ Expected outcomes:
 "Planet: Jupiter, Index: 4"
 */
 // Write your code here
+
+// planets.forEach((element) => console.log(`Planet ${element}, Index: ${planets.indexOf(element)}`))
 
 // Exerice 3: Log array items with their types
 const wowDatatypes = [1, 'text', false, null, undefined];
@@ -31,6 +41,8 @@ Expected outcomes:
 */
 // Write your code here
 
+// wowDatatypes.forEach((element) => console.log(`Item: ${element}, Index: ${wowDatatypes.indexOf(element)}, Type: ${typeof element}`));
+
 // Exerice 4: Log array items without using a loop
 let myArr = [1, 2, 'One', true];
 /*
@@ -38,6 +50,8 @@ Log each item in this array without explicitly using a loop.
 Expected outcomes: 1, 2, "One", true
 */
 // Write your code here
+
+// myArr.forEach((element) => console.log(element));
 
 // Exerice 5: Find common courses between two students
 let student1Courses = ['Math', 'English', 'Programming'];
@@ -48,6 +62,9 @@ Expected outcome: "Common course: Programming"
 */
 // Write your code here
 
+// const commonCourses = student1Courses.filter((element) => student2Courses.includes(element));
+// console.log(commonCourses);
+
 // Exerice 6: Log each letter of array items
 let furniture = ['Table', 'Chairs', 'Couch'];
 /*
@@ -57,7 +74,14 @@ Expected outcomes:
 ...
 "Letters in 'Couch': C, o, u, c, h"
 */
-// Write your code here
+// Write your code here  
+
+// function logStuff (element) {
+//     const charArray = element.split('').join(', ');
+//     console.log(`Letters in '${element}': ${charArray}`)
+// }
+
+// furniture.forEach(logStuff);
 
 // Exerice 7: Filter positive temperatures
 let temperatures = [-5, 3, -1, 22, -40, 5, 18];
@@ -66,6 +90,12 @@ Write the function getPositiveTemperatures such that it returns an array contain
 Expected outcome: [3, 22, 5, 18]
 */
 // Write your code here
+
+// function getPositiveTemperatures (temps) {
+//     return temps.filter((element) => element > 0);
+// }
+
+// console.log(getPositiveTemperatures(temperatures));
 
 // Exerice 8: Filter Odd Years
 /*
@@ -77,6 +107,10 @@ getOddYears([2000, 2015, 2018, 2020]) -> [2015]
 
 // Write your code here
 
-// Sample usage - Uncomment to test your function
+// function getOddYears (years) {
+//     return years.filter((element) => element % 2 != 0);
+// }
+
+// // Sample usage - Uncomment to test your function
 // console.log(getOddYears([2019, 2020, 2021])); // [2019, 2021]
 // console.log(getOddYears([2000, 2015, 2018, 2020])); // [2015]
