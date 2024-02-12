@@ -1,14 +1,13 @@
 
 
 const form = document.querySelector('.form-container');
+const toppings = document.querySelectorAll('input[type="checkbox"]');
+const totalPrice = document.querySelectorAll('.totalPrice');
+const type = document.querySelector('#type');
 
 form.addEventListener('change', updatePrice);
 
 function updatePrice () {
-    const type = document.querySelector('#type');
-    const toppings = document.querySelectorAll('input[type="checkbox"]');
-    const totalPrice = document.querySelectorAll('.totalPrice');
-
     let priceCounter = Number(type.value);
 
     toppings.forEach((currentElement => {
@@ -25,6 +24,25 @@ function updatePrice () {
     priceBannerSpan.style.animation = 'none';
     void priceBannerSpan.offsetWidth; // Trigger reflow
     priceBannerSpan.style.animation = 'zoomAndRotate 0.4s ease-in-out 1';
+}
+
+
+function printOrder () {
+    const orderArr = [];
+    const customerName = document.querySelectorAll('#yourName');
+    let orderPrintOut = document.querySelector('#orderPrintOut');
+
+    orderArr.push(customerName.value);
+
+    toppings.forEach((currentElement) => {
+        if (currentElement.checked) {
+        orderArr.push(currentElement);
+        }
+    });
+    console.log(customerName.value);
+    console.log(orderArr);
+    orderPrintOut.textContent = orderArr.join(', ');
+
 }
 
 
@@ -106,4 +124,4 @@ form.addEventListener('change', priceCalc);
     //     priceCounter += Number(whippedCream.value);
     // } if(document.querySelector("#iceCream").checked) {
     //     priceCounter += Number(iceCream.value);
-    // } 
+    //  

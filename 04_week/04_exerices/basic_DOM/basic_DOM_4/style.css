@@ -66,3 +66,13 @@ body {
     transform: scale(1, 1) rotate(0);
   }
 }
+
+input[type="button"] {
+  display: block;
+  color: antiquewhite;
+  background-color: #ba3c23;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px 0;
+}

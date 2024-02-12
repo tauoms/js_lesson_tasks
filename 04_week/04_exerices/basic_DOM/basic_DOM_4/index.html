@@ -42,6 +42,15 @@
         <div class="price-display">
           <h3>Total Price: <span class="totalPrice">5€</span></h3>
         </div>
+        <div class="details">
+          <h3>Your details:</h3>
+          <form action="">
+            <label for="yourName">Your name: </label>
+            <input type="text" name="yourName" id="yourName" />
+            <input type="button" value="Place Order" onclick="printOrder()" />
+          </form>
+        </div>
+        <div id="orderPrintOut"></div>
       </div>
     </div>
     <script src="script.js"></script>
