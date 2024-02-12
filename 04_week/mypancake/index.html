@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pancake Maker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img src="pancake.jpeg" alt="Delicious pancakes" />
+        <div class="price-banner"><span class="totalPrice">5€</span></div>
+      </div>
+      <div class="form-container">
+        <h2>Customize Your Pancake</h2>
+        <div class="customization-section">
+          <label for="type">Choose your pancake type:</label>
+          <select id="type">
+            <option value="5">Classic - 5€</option>
+            <option value="6">Chocolate - 6€</option>
+            <option value="7">Blueberry - 7€</option>
+          </select>
+        </div>
+        <div class="customization-section">
+          <p>Select your toppings (1€ each):</p>
+          <div>
+            <input
+              type="checkbox"
+              id="nuts"
+              value="1"
+              data-name="Nuts"
+              data-category="toppings"
+            />
+            <label for="nuts">Nuts</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="bananas"
+              value="1"
+              data-name="Bananas"
+              data-category="toppings"
+            />
+            <label for="bananas">Bananas</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="syrup"
+              value="1"
+              data-name="Syrup"
+              data-category="toppings"
+            />
+            <label for="syrup">Syrup</label>
+          </div>
+        </div>
+        <div class="customization-section">
+          <p>Add extras:</p>
+          <div>
+            <input
+              type="checkbox"
+              id="whippedCream"
+              value="2"
+              data-name="Whipped Cream"
+              data-category="extras"
+            />
+            <label for="whippedCream">Whipped Cream - 2€</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="iceCream"
+              value="3"
+              data-name="Ice Cream"
+              data-category="extras"
+            />
+            <label for="iceCream">Ice Cream - 3€</label>
+          </div>
+        </div>
+        <!-- <div class="price-display">
+          <h3>Total Price: <span class="totalPrice">5€</span></h3>
+        </div> -->
+        <div class="details">
+          <h3>Your details:</h3>
+          <form action="">
+            <label for="customerName">Your name: </label>
+            <input type="text" name="customerName" id="customerName" />
+            <input type="button" value="Place Order" id="placeOrderBtn" />
+          </form>
+        </div>
+        <div id="orderPrintOut">
+          <div>Customer name: <span id="order_name"></span></div>
+          <div>Pancake type: <span id="order_type"></span></div>
+          <div><Toppings: <span id="order_toppings"></span></div>
+          <div>Extras: <span id="order_extras"></span></div>
+          <div>Total: <span id="order_price"></span></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
