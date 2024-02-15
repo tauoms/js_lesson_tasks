@@ -82,6 +82,7 @@ input[type="button"] {
   background-color: antiquewhite;
   margin-top: 50px;
   padding: 20px;
+  box-shadow: 0 8px 32px 0 rgba(90, 88, 89);
 }
 
 #orderPrintOut div {
