@@ -4,7 +4,7 @@ Each book should have properties for `title`, `author`, and `yearPublished`.
 Add at least two book objects to this collection.
 */
 
-const library = {}    
+const library = [];    
 
 class BookFirst {
     constructor(title, author, yearPublished) {
@@ -17,8 +17,8 @@ class BookFirst {
 const book1 = new BookFirst('Neuromancer', 'William Gibson', 1984);
 const book2 = new BookFirst('Norwegian Wood', 'Haruki Murakami', 2000);
 
-library.book1 = book1;
-library.book2 = book2;
+library.push(book1);
+library.push(book2);
 
 // console.log(library);
 
@@ -27,20 +27,20 @@ Access the `title` of the first book in the `library` collection and log it to t
 Modify the `yearPublished` for the second book in the collection to a new year, then log the updated book object to the console.
 */
 
-// console.log(library.book1.title);
-library.book2.yearPublished = 2010;
+// console.log(library[0].title);
+library[1].yearPublished = 2010;
 
-// console.log(library.book2);
+// console.log(library[1]);
 
 /* Task 3
 Use dot notation to add a new property `genres` (an array of strings) to the first book in the `library`.
 Use bracket notation to add a boolean property `isAvailable` to the same book, indicating its availability.
 */
 
-library.book1.genres = ['Fiction', 'Science-Fiction'];
-library['book1']['isAvailable'] = true;
+library[0].genres = ['Fiction', 'Science-Fiction'];
+library[0]['isAvailable'] = true;
 
-// console.log(library.book1);
+// console.log(library[0]);
 
 /* Task 4
 Define a constructor function named `Book` that can create new book objects with properties for `title`, `author`, `yearPublished`, and `genres`.
@@ -56,7 +56,7 @@ class Book {
     }
 }
 
-library.book3 = new Book('No Longer Human', 'Osamu Dazai', 1948, 'Semi-Autobiographical');
+library[2] = new Book('No Longer Human', 'Osamu Dazai', 1948, 'Semi-Autobiographical');
 
 // console.log(library);
 
@@ -83,4 +83,4 @@ const jsonLibrary = JSON.stringify(library);
 
 const objLibrary = JSON.parse(jsonLibrary);
 
-console.log(objLibrary.book1.title);
+console.log(objLibrary[0].title);
