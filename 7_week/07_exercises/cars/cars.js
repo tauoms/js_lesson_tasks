@@ -20,10 +20,33 @@ class Car {
 //    - Set up an HTML form for users to input the car's license plate, maker, model, current owner, price, and color.
 //    - Use JavaScript to collect the values entered by the user when the form is submitted.
 
+
+
 // 3. **Create and Store Car Objects:**
 
 //    - Upon form submission, instantiate a new `Car` object using the collected input values.
 //    - Add this new `Car` object to an array that stores all the cars entered by the user.
+
+const submitBtn = document.getElementById('submitBtn');
+
+let allCars = [];
+
+function addCar(event) {
+    event.preventDefault()
+
+    const licenseInput = document.getElementById('license').value;
+    const makerInput = document.getElementById('maker').value;
+    const modelInput = document.getElementById('model').value;
+    const ownerInput = document.getElementById('owner').value;
+    const priceInput = document.getElementById('price').value;
+    const colorInput = document.getElementById('color').value;
+
+    allCars.push(new Car(licenseInput, makerInput, modelInput, ownerInput, priceInput, colorInput));
+
+    console.log(allCars);
+}
+
+submitBtn.addEventListener('click', addCar);
 
 // 4. **Display Car Information:**
 
