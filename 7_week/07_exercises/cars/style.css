@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(178, 203, 203);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #545252;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#car-form {
+}
+
+input {
+  display: block;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #7d7575;
+  margin-bottom: 12px;
+}
