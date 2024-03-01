@@ -6,28 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Cars demo</title>
+    <link rel="shortcut icon" href="favicon.ico" type="/favicon.ico">
 </head>
 
-<body></body>
-<div id="car-form">
-    <form action="">
-        <label for="license">License: </label>
-        <input type="text" id="license" name="license">
-        <label for="maker">Maker: </label>
-        <input type="text" id="maker" name="maker">
-        <label for="model">Model: </label>
-        <input type="text" id="model" name="model">
-        <label for="owner">Current owner: </label>
-        <input type="text" id="owner" name="owner">
-        <label for="price">Price: </label>
-        <input type="text" id="price" name="price">
-        <label for="color">Color: </label>
-        <input type="text" id="color" name="color">
-        <input type="submit" value="Submit" id="submitBtn">
-    </form>
-</div>
+<body>
+    <header>
+        <h1>Cars Database</h1>
+        <form>
+            <label for="license">License</label>
+            <input type="text" id="license">
+            <button type="submit">Search</button>
 
-<script src="main.js"></script>
+        </form>
+    </header>
+    <main>
+        <h2>Insert car data:</h2>
+        <div id="car-form">
+            <form>
+                <div class="form_group">
+                    <label for="license">License: </label>
+                    <input type="text" id="license" name="license">
+                </div>
+                <div class="form_group">
+                    <label for="maker">Maker: </label>
+                    <input type="text" id="maker" name="maker">
+                </div>
+                <div class="form_group">
+                    <label for="model">Model: </label>
+                    <input type="text" id="model" name="model">
+                </div>
+
+                <div class="form_group">
+                    <label for="owner">Current owner: </label>
+                    <input type="text" id="owner" name="owner">
+                </div>
+
+                <div class="form_group">
+                    <label for="price">Price: </label>
+                    <input type="number" id="price" name="price">
+                </div>
+
+                <div class="form_group">
+                    <label for="color">Color: </label>
+                    <input type="color" id="color" name="color">
+                </div>
+
+                <input type="submit" value="Submit" id="submitBtn">
+                <input type="reset" value="Reset form">
+            </form>
+
+        </div>
+        <div id="table">
+            <table id="carsTable">
+                <tr>
+                    <th>License</th>
+                    <th>Maker</th>
+                    <th>Model</th>
+                    <th>Owner</th>
+                    <th>Price</th>
+                    <th>Color</th>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>&copy;2024 Tuomas Kohvakka</footer>
+    <script src="main.js"></script>
 </body>
 
 </html>

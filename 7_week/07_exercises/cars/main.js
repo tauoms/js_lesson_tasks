@@ -15,6 +15,7 @@ class Car {
     }
 }
 
+
 // 2. **User Input for Car Details:**
 
 //    - Set up an HTML form for users to input the car's license plate, maker, model, current owner, price, and color.
