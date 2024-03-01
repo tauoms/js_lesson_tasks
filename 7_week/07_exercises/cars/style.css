@@ -32,11 +32,17 @@ h2 {
   margin-bottom: 20px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 #search-license {
   display: inline;
 }
 
 #car-form {
+  display: inline;
   background-color: #faebd7;
   padding: 20px;
   margin-bottom: 40px;
@@ -77,15 +83,17 @@ td {
   /* border: 1px solid #000; */
 }
 
-th:nth-child(even),
-td:nth-child(even) {
+tr:nth-child(even) {
+  background-color: #e6dbdb;
+}
+
+th:nth-child(even) {
   background-color: rgb(253, 255, 240);
 }
 
-tr:nth-child(odd),
-th:nth-child(odd),
-td:nth-child(odd) {
-}
+/* td:nth-child(even) {
+  background-color: rgb(253, 255, 240);
+} */
 
 footer {
   justify-self: flex-end;
