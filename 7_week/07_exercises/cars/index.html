@@ -12,9 +12,9 @@
 <body>
     <header>
         <h1>Cars Database</h1>
-        <form>
-            <label for="license">License</label>
-            <input type="text" id="license">
+        <form id="search-form">
+            <label for="search-license">License: </label>
+            <input type="text" id="search-license">
             <button type="submit">Search</button>
 
         </form>
@@ -22,7 +22,7 @@
     <main>
         <h2>Insert car data:</h2>
         <div id="car-form">
-            <form>
+            <form id="addCar">
                 <div class="form_group">
                     <label for="license">License: </label>
                     <input type="text" id="license" name="license">
@@ -50,9 +50,8 @@
                     <label for="color">Color: </label>
                     <input type="color" id="color" name="color">
                 </div>
-
-                <input type="submit" value="Submit" id="submitBtn">
-                <input type="reset" value="Reset form">
+                <button type="submit">Add car</button>
+                <button type="reset">Reset form</button>
             </form>
 
         </div>

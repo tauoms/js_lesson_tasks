@@ -17,11 +17,14 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 40px;
 }
 
 h1 {
-  justify-self: flex-end;
+  align-self: center;
+  justify-self: center;
   margin-bottom: 20px;
 }
 
@@ -29,9 +32,15 @@ h2 {
   margin-bottom: 20px;
 }
 
+#search-license {
+  display: inline;
+}
+
 #car-form {
-  background-color: antiquewhite;
+  background-color: #faebd7;
   padding: 20px;
+  margin-bottom: 40px;
+  width: 200px;
 }
 
 input,
@@ -49,8 +58,33 @@ input[type="color"] {
 
 input[type="button"],
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"],
+button[type="submit"],
+button[type="reset"] {
   display: inline;
+}
+
+table {
+  background-color: antiquewhite;
+  padding: 0;
+  margin: 0;
+}
+
+tr,
+th,
+td {
+  padding: 10px;
+  /* border: 1px solid #000; */
+}
+
+th:nth-child(even),
+td:nth-child(even) {
+  background-color: rgb(253, 255, 240);
+}
+
+tr:nth-child(odd),
+th:nth-child(odd),
+td:nth-child(odd) {
 }
 
 footer {
