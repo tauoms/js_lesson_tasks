@@ -81,4 +81,10 @@ button {
   background-color: white;
   color: #20231a;
   font-size: 1.2rem;
+  height: 50px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
 }
