@@ -35,9 +35,11 @@ const scrollFunction = () => {
 
   const mobileBtn = document.querySelector('.mobile');
   const navUl = document.querySelector('nav ul');
+  const menuItems = document.querySelectorAll('nav ul li a');
 
   const toggleMobMenu = () => {
     navUl.classList.toggle('responsive')
   }
 
   mobileBtn.addEventListener('click', toggleMobMenu);
+  menuItems.forEach(item => item.addEventListener('click', toggleMobMenu));
