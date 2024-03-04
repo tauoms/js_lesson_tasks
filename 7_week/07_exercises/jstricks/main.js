@@ -1,5 +1,11 @@
 const backToTopBtn = document.querySelector('#backToTop');
 const header = document.querySelector('header');
+const mobileBtn = document.querySelector('.mobile');
+const navUl = document.querySelector('nav ul');
+const menuItems = document.querySelectorAll('nav ul li a');
+const modalBtn = document.querySelector('.modalBtn');
+const modalOverlay = document.querySelector('.overlay');
+const closeBtn = document.querySelector('.closeBtn');
 
 // const getToTop = () => {
 //     document.body.scrollTop = 0;
@@ -33,13 +39,17 @@ const scrollFunction = () => {
     }
   }
 
-  const mobileBtn = document.querySelector('.mobile');
-  const navUl = document.querySelector('nav ul');
-  const menuItems = document.querySelectorAll('nav ul li a');
-
   const toggleMobMenu = () => {
     navUl.classList.toggle('responsive')
   }
 
+  const toggleModal = () => {
+    modalOverlay.classList.toggle('visible');
+  }
+
   mobileBtn.addEventListener('click', toggleMobMenu);
   menuItems.forEach(item => item.addEventListener('click', toggleMobMenu));
+
+  modalBtn.addEventListener('click', toggleModal);
+  closeBtn.addEventListener('click', toggleModal);
+  modalOverlay.addEventListener('click', toggleModal);
