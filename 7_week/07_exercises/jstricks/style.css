@@ -31,6 +31,11 @@ header {
 
 nav ul li {
   display: inline-block;
+  padding: 0 6px;
+}
+
+nav ul {
+  display: block;
 }
 
 nav a {
@@ -80,11 +85,49 @@ button {
 .bg {
   background-color: white;
   color: #20231a;
-  font-size: 1.2rem;
-  height: 50px;
+  height: 40px;
 }
 
 .logo a {
   text-decoration: none;
   color: inherit;
+}
+
+.mobile {
+  display: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  nav ul {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  ul.responsive {
+    display: block;
+    background-color: antiquewhite;
+    color: #20231a;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+  ul.responsive li {
+    display: block;
+    padding: 1rem;
+  }
+  ul.responsive li:nth-child(even) {
+    background-color: rgb(221, 210, 192);
+  }
+
+  header {
+    background-color: antiquewhite;
+    color: #20231a;
+  }
+}
+
+.material-symbols-outlined {
+  color: #20231a;
 }

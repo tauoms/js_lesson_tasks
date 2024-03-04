@@ -32,3 +32,12 @@ const scrollFunction = () => {
       header.classList.remove('bg');
     }
   }
+
+  const mobileBtn = document.querySelector('.mobile');
+  const navUl = document.querySelector('nav ul');
+
+  const toggleMobMenu = () => {
+    navUl.classList.toggle('responsive')
+  }
+
+  mobileBtn.addEventListener('click', toggleMobMenu);
