@@ -11,10 +11,11 @@
 // ASYNC / AWAIT VERSION:
 const fetchData = async () => {
     try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
     if (!response.ok) {
-        throw new Error(`Error status: ${response.status}`)
+        throw new Error(`Error status: ${response.status}`);
     }
+
     const json = await response.json();
     displayData(json);
     } catch (error) {
@@ -28,11 +29,17 @@ fetchData();
 const displayData = (data) => {
     const postsContainer = document.querySelector('#postsContainer');
 
-    data.forEach ((post) => {
+    data.forEach ((user) => {
         const postElement = document.createElement('div');
         postElement.innerHTML = `
-        <h2>${post.title}</h2>
-        <p>${post.body}</p>`;
+        <h2>${user.name}</h2>
+        <h3>ID: ${user.id}</h3>
+        <h3>username: ${user.username}</h3>
+        <h3>${user.email}</h3>
+        <h3>${user.phone}</h3>
+        <h3>${user.website}</h3>
+        <h3>Company: ${user.company.name}</h3>
+        `;
         postsContainer.appendChild(postElement);
 
         // const postHeading = document.createElement("h2");
