@@ -2,16 +2,25 @@
 // const fetchData = () => {
 //     fetch('https://jsonplaceholder.typicode.com/posts') // Promise
 //       .then((response) => response.json())
-//       .then((json) => displayData(json));
-      
+//       .then((json) => { 
+//         displayData(json);
+//         console.log(json);
+//     });
 // };
 
-// ASYNC AWAIT VERSION:
-async function fetchData () {
-    const response = await
-    fetch('https://jsonplaceholder.typicode.com/posts');
-    let json = await response.json();
+// ASYNC / AWAIT VERSION:
+const fetchData = async () => {
+    try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    if (!response.ok) {
+        throw new Error(`Error status: ${response.status}`)
+    }
+    const json = await response.json();
     displayData(json);
+    } catch (error) {
+        console.error(error);
+    }
+    
 } 
 
 fetchData();
