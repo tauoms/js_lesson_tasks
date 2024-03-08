@@ -8,4 +8,19 @@ body {
   background-color: #333;
   font-family: "Lato", sans-serif;
   color: antiquewhite;
+  margin: 30px;
+}
+
+#postsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+p {
+  margin-top: 10px;
 }
