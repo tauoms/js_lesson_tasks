@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  font-family: "Lato", sans-serif;
+  color: antiquewhite;
+  margin: 30px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+#postsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+#postsContainer div {
+  background-color: #4a4949;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 260px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+
+p {
+  margin-top: 10px;
+}
