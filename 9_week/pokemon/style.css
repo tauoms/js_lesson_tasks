@@ -22,10 +22,12 @@ h1 {
 }
 
 #postsContainer div {
+  display: flex;
+  justify-content: center;
   background-color: #4a4949;
   padding: 20px;
   border-radius: 10px;
-  min-width: 260px;
+  min-width: 200px;
 }
 
 h3 {

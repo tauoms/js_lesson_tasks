@@ -10,7 +10,9 @@
 
 // ASYNC / AWAIT VERSION:
 
-let apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0';
+let apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=500&offset=0';
+
+let pokemonsArr = [];
 
 const fetchData = async () => {
     try {
@@ -21,7 +23,9 @@ const fetchData = async () => {
 
     const json = await response.json();
     console.log(json);
-    displayData(json);
+    pokemonsArr = json.results;
+    displayData(pokemonsArr);
+
     } catch (error) {
         console.error(error);
     }
@@ -32,9 +36,9 @@ fetchData();
 
 const displayData = (data) => {
     const postsContainer = document.querySelector('#postsContainer');
-    const navContainer = document.querySelector('#next-prev');
+    postsContainer.innerHTML = '' // Clear previous display data
 
-    data.results.forEach ((pokemon) => {
+    data.forEach ((pokemon) => {
         const postElement = document.createElement('div');
 
         postElement.innerHTML = `
@@ -43,25 +47,32 @@ const displayData = (data) => {
         postsContainer.appendChild(postElement);
     });
 
-    const nextBtn = document.createElement('BUTTON');
-    nextBtn.textContent = `Next`;
-    nextBtn.id = 'nextBtn';
-    navContainer.appendChild(nextBtn);
-}
+    console.log(pokemonsArr);
 
-const nextBtn = document.querySelector('#nextBtn');
-
-const nextApi = () => {
-    apiUrl = data.next;
 }
 
 // SEARCH:
 
-const searchInput = document.querySelector('#search-pokemon');
 
-const searchPokemon = () => {
+const displayResults = (data) => {
+    const postsContainer = document.querySelector('#postsContainer');
+    postsContainer.innerHTML = '' // Clear previous display data
+
+    data.forEach ((pokemon) => {
+        const postElement = document.createElement('div');
+
+        postElement.innerHTML = `
+        <h2>${pokemon.name}</h2>
+        `;
+        postsContainer.appendChild(postElement);
+    });
 
 }
 
-searchInput.addEventListener('change', searchPokemon);
-// nextBtn.addEventListener('click', nextApi);
+const searchPokemon = (searchTerm) => {
+    const filteredData = pokemonsArr.filter((pokemon) => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    displayData(filteredData);
+}
+
+document.querySelector('#search-pokemon').addEventListener('input', (e) => searchPokemon(e.target.value));
