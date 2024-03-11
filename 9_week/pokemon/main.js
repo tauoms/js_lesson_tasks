@@ -10,7 +10,7 @@
 
 // ASYNC / AWAIT VERSION:
 
-let apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
+let apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0';
 
 const fetchData = async () => {
     try {
@@ -55,4 +55,13 @@ const nextApi = () => {
     apiUrl = data.next;
 }
 
-nextBtn.addEventListener('click', nextApi);
+// SEARCH:
+
+const searchInput = document.querySelector('#search-pokemon');
+
+const searchPokemon = () => {
+
+}
+
+searchInput.addEventListener('change', searchPokemon);
+// nextBtn.addEventListener('click', nextApi);
