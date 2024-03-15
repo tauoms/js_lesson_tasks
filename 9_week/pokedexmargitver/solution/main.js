@@ -25,13 +25,15 @@ const displayData = (data) => {
 
   data.forEach((pokemon) => {
     const pokemonCard = document.createElement('div');
+    const imageUrl = pokemon.sprites.other.dream_world.front_default ?? pokemon.sprites.other['official-artwork'].front_default ?? './assets/placeholder-image-url.webp';
+
     pokemonCard.innerHTML = `
     <h2>${pokemon.name}</h2>
     <div class="card">
-    <img src="${pokemon.sprites.other.dream_world.front_default}">
+    <img src="${imageUrl}">
     <p>
-    Height: ${pokemon.height / 10}m<br>
-    Weight: ${pokemon.weight / 10}kg<br>
+    Height: ${pokemon.height / 10} m<br>
+    Weight: ${pokemon.weight / 10} kg<br>
 
     </p>
     </div>
