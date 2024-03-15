@@ -22,8 +22,9 @@ const fetchData = async () => {
     }
 
     const json = await response.json();
-    console.log(json);
+    // console.log(json);
     pokemonsArr = json.results;
+
     displayData(pokemonsArr);
 
     } catch (error) {
@@ -32,47 +33,54 @@ const fetchData = async () => {
     
 } 
 
+
 fetchData();
 
 const displayData = (data) => {
-    const postsContainer = document.querySelector('#postsContainer');
-    postsContainer.innerHTML = '' // Clear previous display data
+    const pokemonContainer = document.querySelector('#pokemonContainer');
+    pokemonContainer.innerHTML = '' // Clear previous display data
 
     data.forEach ((pokemon) => {
-        const postElement = document.createElement('div');
+        const pokemonCard = document.createElement('div')
 
-        postElement.innerHTML = `
-        <h2>${pokemon.name}</h2>
-        `;
-        postsContainer.appendChild(postElement);
-    });
+        fetch(pokemon.url)
+            .then((response) => response.json())
+            .then((pokemonData) => {
+                const types = pokemonData.types.map((typeObj) => typeObj.type.name).join(', ');
 
-    console.log(pokemonsArr);
+                pokemonCard.innerHTML = `
+                    <img src="${pokemonData.sprites.other['official-artwork'].front_default}">
+                    <h2>${pokemonData.name}</h2>
+                    <p>
+                    ID: ${pokemonData.id}<br>
+                    Height: ${pokemonData.height / 10}m<br>
+                    Weight: ${pokemonData.weight / 10}kg<br>
+                    Type(s): ${types}
+                    </p>
+                    `;
+                    pokemonContainer.appendChild(pokemonCard);
+                    })
+                    
+                });
 
 }
 
 // SEARCH:
 
+const debounce = (func, delay) => {
+    let debounceTimer;
+    return function () {
+      const context = this;
+      const args = arguments;
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => func.apply(context, args), delay);
+    };
+  };
 
-const displayResults = (data) => {
-    const postsContainer = document.querySelector('#postsContainer');
-    postsContainer.innerHTML = '' // Clear previous display data
-
-    data.forEach ((pokemon) => {
-        const postElement = document.createElement('div');
-
-        postElement.innerHTML = `
-        <h2>${pokemon.name}</h2>
-        `;
-        postsContainer.appendChild(postElement);
-    });
-
-}
-
-const searchPokemon = (searchTerm) => {
+const searchPokemon = debounce((searchTerm) => {
     const filteredData = pokemonsArr.filter((pokemon) => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()));
     
     displayData(filteredData);
-}
+}, 300);
 
 document.querySelector('#search-pokemon').addEventListener('input', (e) => searchPokemon(e.target.value));
