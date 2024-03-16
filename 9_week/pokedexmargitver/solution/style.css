@@ -70,3 +70,7 @@ input {
   font-family: inherit;
   margin: 2rem auto;
 }
+
+button {
+  padding: 4px;
+}
