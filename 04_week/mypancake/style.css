@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
   color: #5a4a42;
@@ -7,22 +13,45 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
 }
 
-.container {
+main {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.customization-section div {
+  margin-top: 4px;
+}
+
+.customization-section p {
+  margin: 20px 0 10px;
+}
+
+#type {
+  margin-top: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  margin: 1rem 0 0.5rem;
 }
 
 .image-container {
   position: relative;
   flex: 1;
+  height: 100vh;
 }
 
 .image-container img {
+  margin: 0;
+  padding: 0;
   object-fit: cover;
   width: 50vw;
   height: 100vh;
@@ -33,7 +62,7 @@ body {
 .form-container {
   flex: 1;
   padding: 0 50px;
-  margin-top: 10%;
+  margin-top: 100px;
 }
 
 .price-banner {
